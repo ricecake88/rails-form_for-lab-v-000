@@ -8,7 +8,7 @@ class SchoolClassesController < ApplicationController
     end
 
     def new
-        @school_classes = SchoolClass.new(school_classes_params(:title, :room_number))
+        @school_classes = SchoolClass.new
     end
 
     def show
