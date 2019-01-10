@@ -332,3 +332,31 @@ Processing by SchoolClassesController#show as HTML
   [1m[35mSchoolClass Load (0.3ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 1]]
   Rendered school_classes/show.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 49ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/1" for 24.94.17.227 at 2019-01-10 06:20:01 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/school_classes/new" for 24.94.17.227 at 2019-01-10 06:20:06 +0000
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 24.94.17.227 at 2019-01-10 06:20:10 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sgq3mOJZlzZcuZjtNmvjLx9iiS/iJV6MW6d7BSXGAy10thk0ZO9OXL6WG1etAgzN0mrTPidVkRFRWjGOllB7Zg==", "school_class"=>{"title"=>"Computer Science", "room_number"=>"123"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Computer Science"], ["room_number", 123], ["created_at", "2019-01-10 06:20:10.537418"], ["updated_at", "2019-01-10 06:20:10.537418"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.9ms)
+
+RuntimeError ({"utf8"=>"✓", "authenticity_token"=>"sgq3mOJZlzZcuZjtNmvjLx9iiS/iJV6MW6d7BSXGAy10thk0ZO9OXL6WG1etAgzN0mrTPidVkRFRWjGOllB7Zg==", "school_class"=>{"title"=>"Computer Science", "room_number"=>"123"}, "commit"=>"Create School class", "controller"=>"school_classes", "action"=>"create"}):
+  app/controllers/school_classes_controller.rb:21:in `create'
+
+
