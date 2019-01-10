@@ -565,3 +565,9 @@ Processing by SchoolClassesController#show as HTML
   [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered school_classes/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 36ms (Views: 15.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/school_classes/3" for 24.94.17.227 at 2019-01-10 06:24:40 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 3]]
