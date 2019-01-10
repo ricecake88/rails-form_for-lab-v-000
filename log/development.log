@@ -555,3 +555,13 @@ Processing by SchoolClassesController#create as HTML
   [1m[35mSQL (0.5ms)[0m  INSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Computer Science"], ["room_number", 123], ["created_at", "2019-01-10 06:23:04.756107"], ["updated_at", "2019-01-10 06:23:04.756107"]]
   [1m[36m (39.0ms)[0m  [1mcommit transaction[0m
   [1m[35mSchoolClass Load (0.3ms)[0m  SELECT "school_classes".* FROM "school_classes"
+Redirected to http://165.227.16.205:46556/school_classes/3
+Completed 302 Found in 71441ms (ActiveRecord: 39.9ms)
+
+
+Started GET "/school_classes/3" for 24.94.17.227 at 2019-01-10 06:24:16 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered school_classes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 15.8ms | ActiveRecord: 1.1ms)
